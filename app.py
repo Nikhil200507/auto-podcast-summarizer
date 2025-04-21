@@ -10,7 +10,7 @@ from datetime import timedelta
 model = whisper.load_model("base")  # You can try 'small', 'medium' or 'large' for better quality
 
 # OpenAI API Key (use streamlit secrets for deployment!)
-openai.api_key = "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"
+openai.api_key = st.secrets["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"]
 
 def format_timestamp(seconds):
     return str(timedelta(seconds=int(seconds)))
